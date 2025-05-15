@@ -16,17 +16,17 @@
           Sign in to start managing your projects.
         </h2>
       </div>
-      <form class="form">
+      <form class="form" @submit.prevent="handleSubmit">
         <InputForm
-          :id="'inputEmail'"
-          :label-value="'E-mail'"
-          :type="'email'"
-          :placeholder="'example@example.com'" />
-        <InputForm
-          :id="'inputPassword'"
-          :label-value="'Password'"
-          :type="'password'"
-          :placeholder="'At least 8 characters'" />
+          v-for="field in fields"
+          :id="field.id"
+          :key="field.id"
+          v-model="form[field.id]"
+          :label-value="field.label"
+          :type="field.type"
+          :placeholder="field.placeholder"
+          :autocomplete="field.autocomplete"
+          :error="errors[field.id]" />
 
         <a class="right" href="#">Forgot password?</a>
         <Button>Sign in</Button>
@@ -42,6 +42,50 @@ import InputForm from "@/components/ui/InputForm.vue";
 import Button from "@/components/ui/Button.vue";
 import SignInWith from "@/components/SignInWith.vue";
 import FooterLayout from "@/components/FooterLayout.vue";
+
+const fields = [
+  {
+    id: "email",
+    label: "E-mail",
+    type: "email",
+    placeholder: "example@example.com",
+    autocomplete: "username",
+  },
+  {
+    id: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "At least 8 characters",
+    autocomplete: "current-password",
+  },
+];
+
+const form = ref<Record<string, string>>({
+  email: "",
+  password: "",
+});
+const errors = ref<Record<string, string>>({});
+
+function validate() {
+  errors.value = {};
+  if (!form.value.email) {
+    errors.value.email = "E-mail is required";
+  } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(form.value.email)) {
+    errors.value.email = "Invalid e-mail";
+  }
+  if (!form.value.password) {
+    errors.value.password = "Password is required";
+  } else if (form.value.password.length < 8) {
+    errors.value.password = "Password must be at least 8 characters";
+  }
+  return Object.keys(errors.value).length === 0;
+}
+
+function handleSubmit() {
+  if (validate()) {
+    alert("Form is valid!");
+  }
+}
 </script>
 
 <style scoped>

@@ -4,10 +4,12 @@
     <input
       :id="id"
       v-model="inputValue"
-      class="input"
+      :class="['input', error ? 'input-error' : '']"
       :type="type"
       :placeholder="placeholder"
+      :autocomplete="autocomplete"
       @input="handleInput" />
+    <span v-if="error" class="error">{{ error }}</span>
   </div>
 </template>
 <script setup lang="ts">
@@ -19,6 +21,8 @@ const props = defineProps({
   id: { type: String, required: true },
   type: { type: String, default: "text" },
   labelValue: { type: String, default: "" },
+  autocomplete: { type: String, default: "" },
+  error: { type: String, default: "" },
 });
 
 const emit = defineEmits(["update:modelValue"]);
@@ -74,5 +78,13 @@ label {
       0.8
     );
   outline: 3px solid transparent;
+}
+.error {
+  color: #e11d48;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+.input-error {
+  border: 2px solid #e11d48;
 }
 </style>
