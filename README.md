@@ -1,75 +1,76 @@
-# Nuxt Minimal Starter
+# Nuxt Sign In Page
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a modern and accessible sign-in page built with **Nuxt 3**. It features reusable components, dark mode support, CSS variables, and best practices for structure and accessibility.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- ⚡ **Nuxt 3**: Modern framework for Vue applications.
+- 🎨 **Global styles and CSS variables**: Easily customize colors, fonts, and sizes.
+- 🌙 **Dark mode**: Automatic support based on user preference.
+- 🧩 **Reusable components**: Button, input form, social sign-in section, footer, and more.
+- 📱 **Responsive**: Adapts to mobile and desktop devices.
+- ♿ **Accessibility**: Uses semantic tags and best practices for users with special needs.
 
-```bash
-# npm
-npm install
+## Project Structure
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+assets/css/
+  ├── reset.css
+  ├── variables.css
+  └── global.css
+components/
+  ├── AppLayout.vue
+  ├── FooterLayout.vue
+  ├── SignInWith.vue
+  └── ui/
+      ├── Button.vue
+      └── InputForm.vue
+pages/
+  └── ...
+public/
+  └── icons/
+      ├── Google.svg
+      └── facebook.svg
+app.vue
+nuxt.config.ts
 ```
 
-## Development Server
+## Installation
 
-Start the development server on `http://localhost:3000`:
+1. Clone the repository:
 
-```bash
-# npm
-npm run dev
+   ```bash
+   git clone https://github.com/your-username/nuxt-sign-in-page.git
+   cd nuxt-sign-in-page
+   ```
 
-# pnpm
-pnpm dev
+2. Install dependencies:
 
-# yarn
-yarn dev
+   ```bash
+   npm install
+   ```
 
-# bun
-bun run dev
-```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Production
+## Usage
 
-Build the application for production:
+- Visit `http://localhost:3000` to view the sign-in page.
+- Customize styles by editing files in `assets/css/`.
+- Add or edit components as needed.
 
-```bash
-# npm
-npm run build
+## Customization
 
-# pnpm
-pnpm build
+- Change colors and fonts in `assets/css/variables.css`.
+- Add more button or input variants in the `components/ui/` folder.
+- Modify the layout in `components/AppLayout.vue`.
 
-# yarn
-yarn build
+## License
 
-# bun
-bun run build
-```
+MIT
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Developed with ❤️ using Nuxt 3**
