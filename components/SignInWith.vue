@@ -9,7 +9,7 @@
         Google
       </Button>
       <Button variant="secondary" class="icon-button">
-        <img src="@/public/icons/facebook.svg" alt="Facebook" class="icon" />
+        <img src="@/public/icons/Facebook.svg" alt="Facebook" class="icon" />
         Facebook
       </Button>
     </div>
