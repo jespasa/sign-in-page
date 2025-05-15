@@ -1,0 +1,40 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text-hyperlink: #1e4ae9;
+  --color-primary: #0f172a;
+  --color-secondary: #ececec;
+  --color-accent: #10b981;
+  --color-muted: #f1f5f9;
+  --color-gray: #959cb6;
+
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-xxl: 1.5rem; /* 20px */
+
+  /* Inputs */
+  --input-border: #d4d7e3;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+  --input-bg: #f3f7fb;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f172a;
+    --color-text: #f8fafc;
+    --color-primary: #3b82f6;
+    --color-secondary: #94a3b8;
+    --color-accent: #22d3ee;
+    --color-muted: #1e293b;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.8);
+  }
+} */

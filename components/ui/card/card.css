@@ -1,0 +1,5 @@
+.card {
+  --card-bg: #10b981;
+  --card-shadow: #000000;
+  --card-shadow-opacity: 0.5;
+}
