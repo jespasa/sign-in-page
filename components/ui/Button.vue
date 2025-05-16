@@ -34,6 +34,7 @@ const variantClass = computed(() => {
 .primary-button {
   background: var(--color-primary);
   color: var(--color-secondary);
+  padding: 0.7em 1em;
 }
 .primary-button:hover {
   background: var(--color-accent);
@@ -48,7 +49,7 @@ const variantClass = computed(() => {
   gap: 0.5em;
   background: var(--color-secondary);
   color: var(--color-primary);
-  padding: 0.5em 1em;
+  padding: 0.7em 1em;
 }
 .secondary-button:hover {
   background: var(--color-muted);

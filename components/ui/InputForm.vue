@@ -75,7 +75,7 @@ label {
     var(--input-focus-s),
     var(--input-focus-l)
   );
-  box-shadow: 0 0 0 3px
+  box-shadow: 0 0 0 2px
     hsla(
       var(--input-focus-h),
       var(--input-focus-s),

@@ -113,8 +113,8 @@ function handleSubmit() {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5em;
-    min-height: 100vh;
     align-items: center;
+    padding: 0 0;
   }
   .logo {
     order: 2;
