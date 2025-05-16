@@ -5,7 +5,7 @@
     </div>
     <div class="social-buttons">
       <Button variant="secondary" class="icon-button">
-        <img src="@/public/icons/Google.svg" alt="Google" class="icon" />
+        <img src="@/public/icons/google.svg" alt="Google" class="icon" />
         Google
       </Button>
       <Button variant="secondary" class="icon-button">
