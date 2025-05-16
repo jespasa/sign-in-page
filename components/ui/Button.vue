@@ -48,6 +48,7 @@ const variantClass = computed(() => {
   gap: 0.5em;
   background: var(--color-secondary);
   color: var(--color-primary);
+  padding: 0.5em 1em;
 }
 .secondary-button:hover {
   background: var(--color-muted);

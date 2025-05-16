@@ -13,7 +13,7 @@ body {
   align-items: center;
   width: 90%;
   justify-self: center;
-  min-height: 100dvh;
+  height: 100dvh;
 }
 
 main {

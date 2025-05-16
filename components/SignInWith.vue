@@ -51,6 +51,11 @@ import Button from "@/components/ui/Button.vue";
   gap: 1em;
   justify-content: space-between;
 }
+@media (min-width: 1275px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+}
 
 .text--secondary {
   font-size: var(--font-size-base);

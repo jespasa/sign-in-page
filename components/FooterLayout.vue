@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 100%;
+  padding: 1vh 0;
 }
 .text--custom {
   font-size: var(--font-size-base);

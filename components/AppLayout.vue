@@ -31,10 +31,10 @@
         <a class="right" href="#">Forgot password?</a>
         <Button>Sign in</Button>
       </form>
+      <SignInWith />
     </section>
-    <SignInWith />
-    <FooterLayout />
   </main>
+  <FooterLayout />
 </template>
 
 <script setup lang="ts">
@@ -92,24 +92,56 @@ function handleSubmit() {
 .app-layout {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  height: 100%;
   padding: 3vh 0;
   gap: 1em;
 }
+
 .main-section {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
+
 .logo {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+@media (min-width: 1275px) {
+  .app-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .logo {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-section {
+    order: 1;
+    justify-content: center;
+    padding: 0 3vw;
+    min-height: 80vh;
+    gap: 2em;
+  }
+}
 .logo-img {
   height: 16vh;
   object-fit: cover;
   border-radius: 16px;
+}
+@media (min-width: 1275px) {
+  .logo-img {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
 }
 .form {
   display: flex;
@@ -118,7 +150,7 @@ function handleSubmit() {
 }
 
 .text--primary {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-lg);
   font-weight: 700;
   color: var(--color-primary);
 }
@@ -126,5 +158,18 @@ function handleSubmit() {
   font-size: var(--font-size-base);
   font-weight: 400;
   color: var(--color-primary);
+}
+
+@media (min-width: 1275px) {
+  .text--primary {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .text--secondary {
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    color: var(--color-primary);
+  }
 }
 </style>

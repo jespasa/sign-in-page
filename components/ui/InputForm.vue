@@ -48,6 +48,11 @@ label {
   font-size: 1rem;
   line-height: 100%;
 }
+@media (min-width: 1275px) {
+  label {
+    font-weight: 600;
+  }
+}
 .input-group {
   display: flex;
   flex-direction: column;
