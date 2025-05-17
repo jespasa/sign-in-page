@@ -3,7 +3,7 @@
     <aside class="logo" aria-hidden="true">
       <img
         class="logo-img"
-        src="@/public/img/login-img.jpg"
+        src="@/public/img/login-img.webp"
         alt="Login Image" />
     </aside>
     <section class="main-section" aria-label="Login">

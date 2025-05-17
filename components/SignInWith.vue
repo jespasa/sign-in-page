@@ -5,11 +5,14 @@
     </div>
     <div class="social-buttons">
       <Button variant="secondary" class="icon-button">
-        <img src="@/public/icons/google.svg" alt="Google" class="icon" />
+        <img src="@/public/icons/google.svg" alt="Google logo" class="icon" />
         Google
       </Button>
       <Button variant="secondary" class="icon-button">
-        <img src="@/public/icons/facebook.svg" alt="Facebook" class="icon" />
+        <img
+          src="@/public/icons/facebook.svg"
+          alt="Facebook logo"
+          class="icon" />
         Facebook
       </Button>
     </div>
